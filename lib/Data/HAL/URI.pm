@@ -20,7 +20,8 @@ has(
     handles => [qw(abs as_iri canonical clone eq fragment implementor new_abs opaque path rel scheme secure
                 STORABLE_freeze STORABLE_thaw)],
     lazy    => 1,
-    required => 1,
+    # MT#5615 setting required=>1 breaks on Debian Squeeze
+    required => 0,
 );
 
 sub BUILDARGS {
