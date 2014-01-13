@@ -1,0 +1,7 @@
+libdata-hal-perl (1.000-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #726415)
+  * Note: removed versioned dependency on Module::Build >= 0.40
+    and skipping tests during build time.
+
+ -- Michael Prokop <mprokop@sipwise.com>  Tue, 3 Dec 2013 13:42:03 +0100
