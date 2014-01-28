@@ -175,7 +175,7 @@ sub as_json {
 }
 
 sub http_headers {
-    my ($self) = @_;
+    my ($self, %params) = @_;
     my @headers;
     if ($self->links) {
         if (my ($profile_link) = grep { 'profile' eq $_->relation->as_string } @{ $self->links }) {
@@ -185,10 +185,12 @@ sub http_headers {
         } else {
             push @headers, 'Content-Type' => 'application/hal+json';
         }
-        push @headers,
-            map { (Link => $_->as_http_link_value) }
-            grep { 'curies' ne $_->relation->as_string }
-            @{ $self->links };
+	unless(exists $params{skip_links} && $params{skip_links}) {
+	    push @headers,
+		map { (Link => $_->as_http_link_value) }
+		grep { 'curies' ne $_->relation->as_string }
+		@{ $self->links };
+	}
     }
     return @headers;
 }
