@@ -1,11 +1,9 @@
-libdata-hal-perl (1.000.1+0~mr3.3) unstable; urgency=low
+libdata-hal-perl (1.1.0.0+0~mr3.3.0.0) unstable; urgency=low
 
   [ Andreas Granig ]
   * [5948453] MT#5797 optionally skip Link in http_headers
 
-  [ Sipwise Jenkins Builder ]
-
- -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Sat, 01 Feb 2014 19:38:54 +0100
+ -- Alexander Lutay <alutay@sipwise.com>  Fri, 21 Mar 2014 13:44:29 +0100
 
 libdata-hal-perl (1.000.1) unstable; urgency=medium
 
