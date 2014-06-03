@@ -18,7 +18,10 @@ our $VERSION = '1.000';
 
 my $uri_from_str = sub {
     my ($val) = @_;
-    return $val->$_isa('Data::HAL::URI') ? $val : Data::HAL::URI->new($val);
+    return $val->$_isa('Data::HAL::URI') ? $val : Data::HAL::URI->new(
+            uri => URI->new($val),
+            _original => $val,
+    );
 };
 
 has('embedded', is => 'rw', isa => ArrayRef[InstanceOf['Data::HAL']]);
