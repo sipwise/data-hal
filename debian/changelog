@@ -1,3 +1,12 @@
+libdata-hal-perl (1.1.1.1+0~mr3.3.1.1) unstable; urgency=low
+
+  [ Gerhard Jungwirth ]
+  * [c93f745] MT#7239 fix uri creation
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Thu, 19 Jun 2014 07:11:39 +0200
+
 libdata-hal-perl (1.1.1.0+0~mr3.3.1.0) unstable; urgency=low
 
   * New release.
