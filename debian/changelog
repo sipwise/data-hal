@@ -1,3 +1,9 @@
+libdata-hal-perl (1.5.2.0+0~mr3.7.2.0) unstable; urgency=low
+
+  * New release.
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Thu, 15 Jan 2015 14:57:42 +0100
+
 libdata-hal-perl (1.5.1.0+0~mr3.7.1.0) unstable; urgency=low
 
   * New release.
