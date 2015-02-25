@@ -24,7 +24,7 @@ Build-Depends-Indep: libboolean-perl,
                      liburi-perl,
                      liburi-template-perl,
                      libxml-regexp-perl
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: https://metacpan.org/release/Data-HAL
 
 Package: libdata-hal-perl
