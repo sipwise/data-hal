@@ -10,7 +10,8 @@ use failures qw(Data::HAL::InvalidJSON);
 use HTTP::Headers::Util qw(join_header_words);
 use JSON qw();
 use Moo; # has
-use Safe::Isa qw($_isa);
+#use Safe::Isa qw($_isa);
+use Safe::Isa qw($_can $_isa);
 use Scalar::Util qw(reftype);
 use Types::Standard qw(ArrayRef Bool HashRef InstanceOf Str);
 
@@ -30,6 +31,8 @@ has('resource', is => 'rw', isa => HashRef, default => sub {return {};});
 has('relation', is => 'rw', isa => InstanceOf['Data::HAL::URI'], coerce => $uri_from_str);
 has('_nsmap',   is => 'rw', isa => InstanceOf['Data::HAL::URI::NamespaceMap']);
 has('_recursing', is => 'ro', isa => Bool);
+
+has('_forcearray', is => 'rw', isa => Bool, default => 0); #array of embedded items, even if only one
 
 sub BUILD {
     my ($self) = @_;
@@ -152,7 +155,11 @@ sub _to_nested {
                         push @{ $hal->{"_$prop"}{$r} }, $attr, $nested;
                     }
                 } else {
-                    $hal->{"_$prop"}{$r} = $nested;
+		    if ($p->$_can('_forcearray') and $p->_forcearray) {
+			$hal->{"_$prop"}{$r} = [ $nested ];
+		    } else {
+			$hal->{"_$prop"}{$r} = $nested;
+		    }
                 }
             }
         }
