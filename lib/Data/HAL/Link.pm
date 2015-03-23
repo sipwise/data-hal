@@ -8,7 +8,7 @@ use Log::Any qw($log);
 use MIME::Type qw();
 use Moo; # has
 use Safe::Isa qw($_can $_isa);
-use Types::Standard qw(InstanceOf Str);
+use Types::Standard qw(InstanceOf Str Bool);
 
 our $VERSION = '1.000';
 
@@ -32,6 +32,8 @@ has('profile',     is => 'rw', isa => InstanceOf['Data::HAL::URI'], coerce => $u
 has('title',       is => 'rw', isa => Str);
 has('hreflang',    is => 'rw', isa => Str);
 
+has('_forcearray',    is => 'rw', isa => Bool, default => 0); #array of link items, even if only one
+
 sub BUILD {
     my ($self) = @_;
     if ($self->deprecation) {
@@ -51,6 +53,7 @@ sub _to_nested {
         }
     }
     my $r = delete $hal->{relation};
+    delete $hal->{_forcearray};
     return($hal, $r);
 }
 
