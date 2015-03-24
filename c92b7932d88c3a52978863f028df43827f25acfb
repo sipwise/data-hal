@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a2585a7_dab41df4",
+        "filename": "lib/Data/HAL.pm",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2015-03-24T13:17:19Z",
+      "side": 1,
+      "message": "no need to keep this as comment, i guess",
+      "range": {
+        "startLine": 13,
+        "startChar": 23,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "c92b7932d88c3a52978863f028df43827f25acfb",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2585a7_5ac82d74",
+        "filename": "lib/Data/HAL/Link.pm",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2015-03-24T13:17:19Z",
+      "side": 1,
+      "message": "is _forcehrefarray supposed to do something in the future?",
+      "range": {
+        "startLine": 54,
+        "startChar": 93,
+        "endLine": 54,
+        "endChar": 95
+      },
+      "revId": "c92b7932d88c3a52978863f028df43827f25acfb",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
