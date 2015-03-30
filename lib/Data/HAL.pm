@@ -40,6 +40,26 @@ sub BUILD {
     return;
 }
 
+#for links array containig undef elements
+#around 'BUILDARGS' => sub {
+#    my $orig  = shift;
+#    my $class = shift;
+#    my $params;
+#    if ((scalar @_) == 1) {
+#	($params) = @_;
+#    } else {
+#	$params = { @_ };
+#    }
+#    if (reftype $params eq reftype {} && exists $params->{links}) {
+#	my @links = ();
+#	foreach my $l (@{ $params->{links} }) {
+#	    push(@links,$l) if defined $l;
+#	}
+#	$params->{links} = \@links;
+#    }
+#    $class->$orig($params);
+#};
+
 sub from_json {
     my ($self, $json, $relation) = @_;
     my $nested = clone JSON::from_json($json);

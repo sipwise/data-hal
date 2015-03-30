@@ -47,11 +47,9 @@ sub _to_nested {
     my ($self, $root) = @_;
     my $hal;
     for my $attr (map { $_->accessor } $self->meta->get_all_attributes) {
-        #next if $attr eq '_forcehrefarray';
         my $val = $self->$attr;
         if (defined $val) {
             $hal->{$attr} = $val->$_can('as_string') ? $val->as_string($root) : $val;
-            #$hal->{$attr} = [ $hal->{$attr} ] if ($attr eq 'href' and $self->_forcehrefarray);
         }
     }
     my $r = delete $hal->{relation};
