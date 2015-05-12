@@ -450,7 +450,7 @@ L<AtomPub|http://enwp.org/AtomPub>, the more mature, featureful hypermedia proto
 
 Lars Dɪᴇᴄᴋᴏᴡ C<< <daxim@cpan.org> >>
 
-=head1 LICENCE AND COPYRIGHT
+=head1 LICENSE
 
 Copyright © 2013 Lars Dɪᴇᴄᴋᴏᴡ C<< <daxim@cpan.org> >>
 

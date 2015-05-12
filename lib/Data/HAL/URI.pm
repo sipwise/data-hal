@@ -108,3 +108,14 @@ None.
 =head1 CONFIGURATION AND ENVIRONMENT
 
 Requires no configuration files or environment variables.
+
+=head1 AUTHOR
+
+Lars Dɪᴇᴄᴋᴏᴡ C<< <daxim@cpan.org> >>
+
+=head1 LICENSE
+
+Copyright © 2013 Lars Dɪᴇᴄᴋᴏᴡ C<< <daxim@cpan.org> >>
+
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl 5.18.0.
