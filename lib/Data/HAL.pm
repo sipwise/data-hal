@@ -210,10 +210,11 @@ sub http_headers {
     if ($self->links) {
         if (my ($profile_link) = grep { 'profile' eq $_->relation->as_string } @{ $self->links }) {
             push @headers, 'Content-Type' => join_header_words(
-                'application/hal+json' => undef, profile => $profile_link->href->as_string
+                'application/hal+json' => undef, profile => $profile_link->href->as_string,
+                charset => 'utf-8'
             );
         } else {
-            push @headers, 'Content-Type' => 'application/hal+json';
+            push @headers, 'Content-Type' => 'application/hal+json; charset=utf-8';
         }
 	unless(exists $params{skip_links} && $params{skip_links}) {
 	    push @headers,
