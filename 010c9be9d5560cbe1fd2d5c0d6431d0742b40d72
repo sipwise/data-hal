@@ -16,6 +16,24 @@
       "revId": "010c9be9d5560cbe1fd2d5c0d6431d0742b40d72",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a3291f1_01aff8e4",
+        "filename": "lib/Data/HAL/Link.pm",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2015-05-13T07:01:39Z",
+      "side": 1,
+      "message": "question is, can we? lars wrote this as a separate module, which we officially just forked, because he is no longer working on it. https://github.com/daxim/data-hal",
+      "parentUuid": "3a3291f1_416e20cb",
+      "revId": "010c9be9d5560cbe1fd2d5c0d6431d0742b40d72",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
