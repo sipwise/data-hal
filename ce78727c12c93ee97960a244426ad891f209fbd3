@@ -70,6 +70,30 @@
       "revId": "ce78727c12c93ee97960a244426ad891f209fbd3",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a3291f1_c18fb074",
+        "filename": "lib/Data/HAL.pm",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2015-05-13T07:45:19Z",
+      "side": 1,
+      "message": "https://metacpan.org/pod/Perl::Critic::Policy::CodeLayout::RequireTrailingCommaAtNewline",
+      "parentUuid": "3a3291f1_0196d894",
+      "range": {
+        "startLine": 214,
+        "startChar": 33,
+        "endLine": 214,
+        "endChar": 34
+      },
+      "revId": "ce78727c12c93ee97960a244426ad891f209fbd3",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
