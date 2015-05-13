@@ -46,6 +46,30 @@
       "revId": "ce78727c12c93ee97960a244426ad891f209fbd3",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a3291f1_0196d894",
+        "filename": "lib/Data/HAL.pm",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2015-05-13T07:43:32Z",
+      "side": 1,
+      "message": "just best practice. but I\u0027m teaching him, because it\u0027s one of the \"TAP\" test checks",
+      "parentUuid": "3a3291f1_8182c850",
+      "range": {
+        "startLine": 214,
+        "startChar": 33,
+        "endLine": 214,
+        "endChar": 34
+      },
+      "revId": "ce78727c12c93ee97960a244426ad891f209fbd3",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
