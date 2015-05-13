@@ -34,6 +34,24 @@
       "revId": "010c9be9d5560cbe1fd2d5c0d6431d0742b40d72",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a3291f1_417ce072",
+        "filename": "lib/Data/HAL/Link.pm",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2015-05-13T07:36:23Z",
+      "side": 1,
+      "message": "See commit message here: \n\nhttps://git.mgm.sipwise.com/gitweb/?p\u003ddata-hal.git;a\u003dcommit;h\u003d68ae9d4791853e956dd51df3026abc58a71d42ba\n\nThis is only information I have, but IMHO it worth to add Andreas on review here as it is not technical question anymore.",
+      "parentUuid": "3a3291f1_01aff8e4",
+      "revId": "010c9be9d5560cbe1fd2d5c0d6431d0742b40d72",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
