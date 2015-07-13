@@ -1,3 +1,19 @@
+libdata-hal-perl (1.8.0.0+0~mr4.1.0.0) unstable; urgency=low
+
+  [ Michael Prokop ]
+  * [9cbf237] MT#7505 Add .gitreview file for data-hal
+
+  [ Rene Krenn ]
+  * [e5670fb] MT#12273 '_forcearray' attr for Data::HAL's asjson
+
+  [ Victor Seva ]
+  * [010c9be] MT#11921 fix tap-test
+  * [98a00e4] MT#12927 add charset utf-8 to hal+json headers
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 13 Jul 2015 15:08:06 +0200
+
 libdata-hal-perl (1.7.0.0+0~mr4.0.0.0) unstable; urgency=low
 
   [ Michael Prokop ]
