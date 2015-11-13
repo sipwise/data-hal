@@ -1,0 +1,33 @@
+#!/bin/bash
+# This script is used for running the tests with proper arguments
+# from within Jenkins
+
+set -e
+set -u
+
+RC=0
+
+if [ -d /results ] ; then
+  # Running from Jenkins (RW)
+  RESULTS="/results"
+
+  cd "/code"
+  prove --formatter TAP::Formatter::JUnit -l -I/code/lib "${CODE}" | \
+    tee -a "${RESULTS}/results.xml" || RC=$?
+else
+  # Running locally in Docker
+  RESULTS="./results"
+  mkdir -p "${RESULTS}"
+
+  prove -v --color -l -I/code/lib | tee -a "${RESULTS}/results.pretty" || RC=$?
+fi
+
+echo "Finished test execution, test execution returned with exit code ${RC}."
+for file in "${RESULTS}/results.pretty" "${RESULTS}/results.xml" ; do
+  if [ -f "$file" ] ; then
+    echo "Test results available at ${file}"
+  fi
+done
+
+exit "${RC}"
+
