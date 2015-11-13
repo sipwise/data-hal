@@ -13,7 +13,7 @@ my $hal = Data::HAL->new(
 );
 
 is_deeply [$hal->http_headers], [
-    'Content-Type' => 'application/hal+json; profile="http://example.com/docs"',
+    'Content-Type' => 'application/hal+json; profile="http://example.com/docs"; charset=utf-8',
     'Link' => '<http://example.com/a-resource>; rel=self',
     'Link' => '<http://example.com/docs>; rel=profile',
     'Link' => '</a-foo-thing>; rel="http://example.com/rel#foo"',
