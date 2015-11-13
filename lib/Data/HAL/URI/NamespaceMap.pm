@@ -24,4 +24,6 @@ sub uri {
     return;
 }
 
+sub add_mapping     { $_[0]->namespace_map->{$_[1]} = $_[2] }
+
 1;
