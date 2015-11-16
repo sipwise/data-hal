@@ -1,4 +1,4 @@
-use Module::Build qw();
+use Module::Build qw(); # test
 Module::Build->new(
     add_to_cleanup => [ 'Data-HAL-*' ],
     build_requires => {

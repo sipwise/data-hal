@@ -1,4 +1,4 @@
-use strictures;
+use strictures; #test
 use Test::More import => [qw(done_testing is_deeply)];
 use Data::HAL qw();
 use Data::Visitor::Callback qw();
