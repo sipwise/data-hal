@@ -12,7 +12,7 @@ if [ -d /results ] ; then
   RESULTS="/results"
 
   cd "/code"
-  prove --formatter TAP::Formatter::JUnit -l -I/code/lib | \
+  PERL_TEST_HARNESS_DUMP_TAP="${RESULTS}" prove --timer --formatter TAP::Formatter::JUnit -l -I/code/lib | \
     tee -a "${RESULTS}/results.xml" || RC=$?
 else
   # Running locally in Docker
