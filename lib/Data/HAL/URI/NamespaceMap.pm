@@ -24,6 +24,14 @@ sub uri {
     return;
 }
 
-sub add_mapping     { $_[0]->namespace_map->{$_[1]} = $_[2] }
+sub add_mapping {
+  my ($self,$name,$href) = @_;
+  my $map = $self->namespace_map;
+  if ($map) {
+    return $map->{$name} = $href;
+  } else {
+    return $self->SUPER::add_mapping($name,$href);
+  }
+}
 
 1;
