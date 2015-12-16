@@ -1,3 +1,23 @@
+libdata-hal-perl (1.9.1.0+0~mr4.2.1.0) unstable; urgency=medium
+
+  [ Gerhard Jungwirth ]
+  * [85538c7] MT#16235 skip typecheck in add_mapping
+  * [5680eb7] MT#16235 Add new test t/simple.t
+
+  [ Alexander Lutay ]
+  * [2f25ee8] MT#16399 Add initial docker based unit test for Jenkins
+  * [5afd73c] MT#16399 Add timing to XML output from tool 'prove'
+
+  [ Rene Krenn ]
+  * [ac5f0bf] MT#16235 make add_mapping work for both wheezy and jessie
+
+  [ Victor Seva ]
+  * [1f1dcc3] MT#12927 fix tests adding missing charset
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Wed, 16 Dec 2015 09:07:39 +0100
+
 libdata-hal-perl (1.9.0.0+0~mr4.2.0.0) unstable; urgency=medium
 
   * New release.
