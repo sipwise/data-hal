@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba65a107_535a7384",
+        "filename": "t/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-01-12T22:42:55Z",
+      "side": 1,
+      "message": "Looking at the other reviews I assume this line should/could go away with the switch to the sipwise-jessie image?",
+      "revId": "95004c8a02d1b5801bd95048c6a0f1f38c5cb311",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
