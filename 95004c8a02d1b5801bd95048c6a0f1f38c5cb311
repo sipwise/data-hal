@@ -16,6 +16,24 @@
       "revId": "95004c8a02d1b5801bd95048c6a0f1f38c5cb311",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba65a107_d3a9a325",
+        "filename": "t/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2016-01-12T23:11:36Z",
+      "side": 1,
+      "message": "Ah, looking at https://gerrit.mgm.sipwise.com/#/c/4114/ the release-trunk-jessie is there because of custom Debian packages we don\u0027t have available in sipwise-jessie, now I understand. :)",
+      "parentUuid": "ba65a107_535a7384",
+      "revId": "95004c8a02d1b5801bd95048c6a0f1f38c5cb311",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
