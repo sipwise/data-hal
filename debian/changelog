@@ -1,3 +1,18 @@
+libdata-hal-perl (1.11.0.0+0~mr4.4.0.0) unstable; urgency=medium
+
+  [ Victor Seva ]
+  * [0b1c936] MT#16891 t/Dockerfile: DOCKER_NAME
+
+  [ Guillem Jover ]
+  * [95004c8] MT#17029 Switch Dockerfile to use a sipwise-jessie image
+
+  [ Michael Prokop ]
+  * [6dc3eae] MT#17699 Bump Standards-Version to 3.9.7
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 21 Mar 2016 22:11:28 +0100
+
 libdata-hal-perl (1.10.0.0+0~mr4.3.0.0) unstable; urgency=medium
 
   [ Gerhard Jungwirth ]
