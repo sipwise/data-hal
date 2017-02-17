@@ -31,8 +31,8 @@ has('resource', is => 'rw', isa => HashRef, default => sub {return {};});
 has('relation', is => 'rw', isa => InstanceOf['Data::HAL::URI'], coerce => $uri_from_str);
 has('_nsmap',   is => 'rw', isa => InstanceOf['Data::HAL::URI::NamespaceMap']);
 has('_recursing', is => 'ro', isa => Bool);
-
-has('_forcearray', is => 'rw', isa => Bool, default => 0); #array of embedded items, even if only one
+has('_forcearray', is => 'rw', isa => Bool, default => 0 ); #array of items, even if only one. Used on the child level.
+has('_forcearray_underneath', is => 'rw', isa => HashRef ); #{ all => 1 } means all
 
 sub BUILD {
     my ($self) = @_;
@@ -175,11 +175,30 @@ sub _to_nested {
                         push @{ $hal->{"_$prop"}{$r} }, $attr, $nested;
                     }
                 } else {
-		    if ($p->$_can('_forcearray') and $p->_forcearray) {
-			$hal->{"_$prop"}{$r} = [ $nested ];
-		    } else {
-			$hal->{"_$prop"}{$r} = $nested;
-		    }
+                    my $forcearray;
+                    if ( $p->$_can('_forcearray') && $p->_forcearray ){
+                        $forcearray = 1;
+                    } elsif ( $p->$_can('forcearray_policy') ) {
+                        $forcearray = $p->forcearray_policy($root,$prop,$r);
+                    } elsif ( $root->$_can('forcearray_policy') ) {
+                        $forcearray = $root->forcearray_policy($prop,$r,$p);
+                    } elsif ( $root->_forcearray_underneath ) {
+                        if( $forcearray = $root->_forcearray_underneath->{all} ){
+                            $forcearray = 1;
+                        } elsif ( exists $root->_forcearray_underneath->{$prop} ){
+                            if ( 'HASH' eq ref $root->_forcearray_underneath->{$prop} ){
+                                #order of ifs allows to deny particular resource arraify
+                                if ( exists $root->_forcearray_underneath->{$prop}->{$r} ){
+                                    $forcearray = $root->_forcearray_underneath->{$prop}->{$r};
+                                } elsif ( exists $root->_forcearray_underneath->{$prop}->{all} ){
+                                    $forcearray = 1;
+                                }
+                            } else {
+                                $forcearray = $root->_forcearray_underneath->{$prop};
+                            }
+                        }
+                    }                    
+                    $hal->{"_$prop"}{$r} = $forcearray ? [ $nested ] : $nested;
                 }
             }
         }
@@ -217,12 +236,12 @@ sub http_headers {
         } else {
             push @headers, 'Content-Type' => 'application/hal+json; charset=utf-8';
         }
-	unless(exists $params{skip_links} && $params{skip_links}) {
-	    push @headers,
-		map { (Link => $_->as_http_link_value) }
-		grep { 'curies' ne $_->relation->as_string }
-		@{ $self->links };
-	}
+        unless(exists $params{skip_links} && $params{skip_links}) {
+            push @headers,
+                map { (Link => $_->as_http_link_value) }
+                grep { 'curies' ne $_->relation->as_string }
+                @{ $self->links };
+        }
     }
     return @headers;
 }
