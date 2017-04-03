@@ -2,53 +2,55 @@ Source: libdata-hal-perl
 Section: perl
 Priority: optional
 Maintainer: Sipwise Development Team <support@sipwise.com>
-Build-Depends: debhelper (>= 8),
-               perl
-Build-Depends-Indep: libboolean-perl,
-                     libclone-perl,
-                     libdata-visitor-perl,
-                     libfailures-perl,
-                     libfile-slurp-perl,
-                     libhttp-message-perl,
-                     libjson-perl,
-                     liblog-any-adapter-filehandle-perl,
-                     liblog-any-adapter-perl,
-                     liblog-any-perl,
-                     libmime-types-perl,
-                     libmodule-build-perl,
-                     libmoo-perl,
-                     libsafe-isa-perl,
-                     libstrictures-perl,
-                     libtest-fatal-perl,
-                     libtype-tiny-perl,
-                     liburi-namespacemap-perl,
-                     liburi-perl,
-                     liburi-template-perl,
-                     libxml-regexp-perl
-Standards-Version: 3.9.7
+Build-Depends:
+ debhelper (>= 9),
+ libmodule-build-perl,
+ perl,
+Build-Depends-Indep:
+ libboolean-perl,
+ libclone-perl,
+ libdata-visitor-perl,
+ libfailures-perl,
+ libfile-slurp-perl,
+ libhttp-message-perl,
+ libjson-perl,
+ liblog-any-adapter-filehandle-perl,
+ liblog-any-adapter-perl,
+ liblog-any-perl,
+ libmime-types-perl,
+ libmoo-perl,
+ libsafe-isa-perl,
+ libstrictures-perl,
+ libtest-fatal-perl,
+ libtype-tiny-perl,
+ liburi-namespacemap-perl,
+ liburi-perl,
+ liburi-template-perl,
+ libxml-regexp-perl,
+Standards-Version: 3.9.8
 Homepage: https://metacpan.org/release/Data-HAL
 
 Package: libdata-hal-perl
 Architecture: all
-Depends: libboolean-perl,
-         libclone-perl,
-         libdata-visitor-perl,
-         libfailures-perl,
-         libhttp-message-perl,
-         libjson-perl,
-         liblog-any-perl,
-         libmime-types-perl,
-         libmoo-perl,
-         libsafe-isa-perl,
-         libstrictures-perl,
-         libtype-tiny-perl,
-         liburi-namespacemap-perl,
-         liburi-perl,
-         liburi-template-perl,
-         libxml-regexp-perl,
-         ${misc:Depends},
-         ${perl:Depends}
+Depends:
+ ${misc:Depends},
+ ${perl:Depends},
+ libboolean-perl,
+ libclone-perl,
+ libdata-visitor-perl,
+ libfailures-perl,
+ libhttp-message-perl,
+ libjson-perl,
+ liblog-any-perl,
+ libmime-types-perl,
+ libmoo-perl,
+ libsafe-isa-perl,
+ libstrictures-perl,
+ libtype-tiny-perl,
+ liburi-namespacemap-perl,
+ liburi-perl,
+ liburi-template-perl,
+ libxml-regexp-perl,
 Description: Hypertext Application Language resource
- HAL is a format you can use in your hypermedia API.
- .
- This description was automagically extracted from the module by dh-make-perl.
+ This package provides the Data::HAL module, where HAL is a format you can
+ use in your hypermedia API.

@@ -1,28 +1,26 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://metacpan.org/release/Data-HAL
-Upstream-Contact: Lars Dɪᴇᴄᴋᴏᴡ C<< <daxim@cpan.org> >>
+Upstream-Contact: Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
 Upstream-Name: Data-HAL
 
 Files: *
-Copyright: Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
-License: Artistic or GPL-1+
-
-Files: debian/*
-Copyright: 2013, Michael Prokop <mprokop@sipwise.com>
+Copyright:
+ Copyright © 2013 Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
+ Copyright © 2013-2017 Sipwise GmbH, Austria
 License: Artistic or GPL-1+
 
 License: Artistic
  This program is free software; you can redistribute it and/or modify
  it under the terms of the Artistic License, which comes with Perl.
- .
+Comment:
  On Debian systems, the complete text of the Artistic License can be
- found in `/usr/share/common-licenses/Artistic'.
+ found in '/usr/share/common-licenses/Artistic'.
 
 License: GPL-1+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 1, or (at your option)
  any later version.
- .
+Comment:
  On Debian systems, the complete text of version 1 of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-1'.
+ Public License can be found in '/usr/share/common-licenses/GPL-1'.
