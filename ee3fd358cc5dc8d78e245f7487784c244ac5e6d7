@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a1969be_41041115",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2017-04-04T12:33:13Z",
+      "side": 1,
+      "message": "can you please clarify why it\u0027s obsolete (because I had to actually research to find out why it\u0027s obsolete), AFAICT it\u0027s because libmodule-build-perl \u003e\u003d0.400100-2 is available in wheezy and newer (or possibly even shipped with perl-modules itself as in jessie), right?",
+      "revId": "ee3fd358cc5dc8d78e245f7487784c244ac5e6d7",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a1969be_e602730a",
         "filename": "debian/copyright",
         "patchSetId": 1
