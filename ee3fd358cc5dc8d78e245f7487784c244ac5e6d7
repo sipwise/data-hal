@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1969be_e602730a",
+        "filename": "debian/copyright",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2017-04-04T12:30:10Z",
+      "side": 1,
+      "message": "I really just worked on the (initial) debian/ stuff and nothing else, I\u0027m fine with either just dropping my name totally from here or moving it to a debian/ section.",
+      "revId": "ee3fd358cc5dc8d78e245f7487784c244ac5e6d7",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
