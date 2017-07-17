@@ -1,3 +1,12 @@
+libdata-hal-perl (5.5.0.0+0~mr5.5.0.0) unstable; urgency=medium
+
+  [ Victor Seva ]
+  * [52c27ae] TT#17642 docker: follow policy to include NGCP repository
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 17 Jul 2017 22:42:14 +0200
+
 libdata-hal-perl (5.4.0.0+0~mr5.4.0.0) unstable; urgency=medium
 
   [ Guillem Jover ]
