@@ -5,16 +5,34 @@ FROM docker.mgm.sipwise.com/sipwise-jessie:latest
 # is updated with the current date. It will force refresh of all
 # of the base images and things like `apt-get update` won't be using
 # old cached versions when the Dockerfile is built.
-ENV REFRESHED_AT 2016-01-12
+ENV REFRESHED_AT 2017-07-18
 
 # TODO - the release-trunk-jessie is too dynamic yet, though required for some build/test dependencies
 RUN echo "deb https://deb.sipwise.com/autobuild/ release-trunk-jessie main" >>/etc/apt/sources.list
 
-RUN apt-get update
-RUN apt-get install --assume-yes perl libstrictures-perl libboolean-perl libclone-perl \
-  libtest-roo-perl libtype-tiny-perl liburi-perl libhttp-message-perl libjson-perl \
-  liblog-any-perl libmime-types-perl libdata-hal-perl libfile-slurp-perl libtest-fatal-perl \
-  liblog-any-adapter-callback-perl liblog-any-adapter-filehandle-perl libtap-formatter-junit-perl
+RUN apt-get update && apt-get install --assume-yes perl \
+ libboolean-perl \
+ libclone-perl \
+ libdata-visitor-perl \
+ libfailures-perl \
+ libfile-slurp-perl \
+ libhttp-message-perl \
+ libjson-perl \
+ liblog-any-adapter-callback-perl \
+ liblog-any-adapter-filehandle-perl \
+ liblog-any-perl \
+ libmime-types-perl \
+ libmoo-perl \
+ libsafe-isa-perl \
+ libstrictures-perl \
+ libtap-formatter-junit-perl \
+ libtest-fatal-perl \
+ libtest-roo-perl \
+ libtype-tiny-perl \
+ liburi-namespacemap-perl \
+ liburi-perl \
+ liburi-template-perl \
+ libxml-regexp-perl
 
 RUN echo 'prove -I /code/lib -v --color -l --formatter TAP::Formatter::JUnit' >>/root/.bash_history
 RUN echo 'prove -I /code/lib --color -l' >>/root/.bash_history
