@@ -5,7 +5,7 @@ FROM docker.mgm.sipwise.com/sipwise-jessie:latest
 # is updated with the current date. It will force refresh of all
 # of the base images and things like `apt-get update` won't be using
 # old cached versions when the Dockerfile is built.
-ENV REFRESHED_AT 2017-06-30
+ENV REFRESHED_AT 2017-07-18
 
 # files that get-code generates
 COPY t/sources.list.d/builddeps.list /etc/apt/sources.list.d/
@@ -14,7 +14,7 @@ COPY t/sources.list.d/preferences /etc/apt/preferences.d/
 RUN apt-get update
 RUN apt-get install --assume-yes perl libstrictures-perl libboolean-perl libclone-perl \
   libtest-roo-perl libtype-tiny-perl liburi-perl libhttp-message-perl libjson-perl \
-  liblog-any-perl libmime-types-perl libdata-hal-perl libfile-slurp-perl libtest-fatal-perl \
+  liblog-any-perl libmime-types-perl libfile-slurp-perl libtest-fatal-perl \
   liblog-any-adapter-callback-perl liblog-any-adapter-filehandle-perl libtap-formatter-junit-perl
 
 RUN echo 'prove -I /code/lib -v --color -l --formatter TAP::Formatter::JUnit' >>/root/.bash_history
