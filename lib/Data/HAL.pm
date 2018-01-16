@@ -17,6 +17,9 @@ use Types::Standard qw(ArrayRef Bool HashRef InstanceOf Str);
 
 our $VERSION = '1.000';
 
+our $__forcearray = undef;
+our $__forcearray_underneath = undef;
+
 my $uri_from_str = sub {
     my ($val) = @_;
     return $val->$_isa('Data::HAL::URI') ? $val : Data::HAL::URI->new(
@@ -37,6 +40,8 @@ has('_forcearray_underneath', is => 'rw', isa => HashRef ); #{ all => 1 } means 
 sub BUILD {
     my ($self) = @_;
     $self->_expand_curies unless $self->_recursing;
+    $self->_forcearray($__forcearray) if defined $__forcearray;
+    $self->_forcearray_underneath($__forcearray_underneath) if defined $__forcearray_underneath;
     return;
 }
 
