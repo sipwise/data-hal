@@ -33,8 +33,6 @@ Homepage: https://metacpan.org/release/Data-HAL
 Package: libdata-hal-perl
 Architecture: all
 Depends:
- ${misc:Depends},
- ${perl:Depends},
  libboolean-perl,
  libclone-perl,
  libdata-visitor-perl,
@@ -51,6 +49,8 @@ Depends:
  liburi-perl,
  liburi-template-perl,
  libxml-regexp-perl,
+ ${misc:Depends},
+ ${perl:Depends},
 Description: Hypertext Application Language resource
  This package provides the Data::HAL module, where HAL is a format you can
  use in your hypermedia API.
