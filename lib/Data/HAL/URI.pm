@@ -6,6 +6,64 @@ use URI qw();
 
 our $VERSION = '1.000';
 
+my %uri_require_attempted = ();
+my %uri_implements = ();
+BEGIN {
+    # no critic (TestingAndDebugging::ProhibitNoWarnings)
+    no warnings 'redefine';
+    *URI::implementor = sub {
+        my($scheme, $impclass) = @_;
+        if (!$scheme || $scheme !~ /\A$URI::scheme_re\z/o) {
+            require URI::_generic;
+            return "URI::_generic";
+        }
+
+        $scheme = lc($scheme);
+
+        if ($impclass) {
+        # Set the implementor class for a given scheme
+            my $old = $uri_implements{$scheme};
+            $impclass->_init_implementor($scheme);
+            $uri_implements{$scheme} = $impclass;
+            return $old;
+        }
+
+        my $ic = $uri_implements{$scheme};
+        return $ic if $ic;
+
+        # scheme not yet known, look for internal or
+        # preloaded (with 'use') implementation
+        $ic = "URI::$scheme";  # default location
+
+        # turn scheme into a valid perl identifier by a simple transformation...
+        $ic =~ s/\+/_P/g;
+        $ic =~ s/\./_O/g;
+        $ic =~ s/\-/_/g;
+
+        # no critic (TestingAndDebugging::ProhibitNoStrict,TestingAndDebugging::ProhibitProlongedStrictureOverride)
+        no strict 'refs';
+        # check we actually have one for the scheme:
+        unless (@{"${ic}::ISA"}) {
+            if (not exists $uri_require_attempted{$ic}) {
+                # Try to load it
+                my $_old_error = $@;
+                # no critic (BuiltinFunctions::ProhibitStringyEval)
+                eval "require $ic";
+                # no critic (Variables::RequireLocalizedPunctuationVars)
+                die $@ if $@ && $@ !~ /Can\'t locate.*in \@INC/;
+                $@ = $_old_error;
+                $uri_require_attempted{$ic} = 1;
+            }
+            # no critic (Subroutines::ProhibitExplicitReturnUndef)
+            return undef unless @{"${ic}::ISA"};
+        }
+
+        $ic->_init_implementor($scheme);
+        $uri_implements{$scheme} = $ic;
+        $ic;
+    };
+}
+
 has('_original', is => 'rw', isa => Str);
 # just records what was passed to the constructor, this is a work-around for
 # URI->new being a lossy operation
