@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a6ced46_e3c0d22c",
+        "filename": "lib/Data/HAL/URI.pm",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000008
+      },
+      "writtenOn": "2018-03-16T12:37:40Z",
+      "side": 1,
+      "message": "Is it safe or a good idea to override the entire method here? How about saving the original method and then call it before or after you run your own code? Or even better go for an upstream fix instead?",
+      "revId": "c9f0b204249f0991409eb61c703d8c29a21418bf",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
