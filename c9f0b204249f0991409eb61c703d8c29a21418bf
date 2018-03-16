@@ -16,6 +16,24 @@
       "revId": "c9f0b204249f0991409eb61c703d8c29a21418bf",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a6ced46_23174aa5",
+        "filename": "lib/Data/HAL/URI.pm",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2018-03-16T12:57:37Z",
+      "side": 1,
+      "message": "older patchsets shows exactly such attempts to make use of the \"super\" method. :-) turned out its hard/dangerous to decouple all aspects of the possible internal usage/parameters of this factory method -\u003e so trying to utilize the original method here will not make this code independent of the original method -\u003e no effective benefit but complications only.\n\nyes wrote in the ticket that an upstream fix is needed.\nfor now essentially Data:HAL is prone to the issue, so this is now a workaround at a neat place for us; until fixed in upstream one day..",
+      "parentUuid": "1a6ced46_e3c0d22c",
+      "revId": "c9f0b204249f0991409eb61c703d8c29a21418bf",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
