@@ -13,12 +13,11 @@ sub uri {
     my ($self, $abbr) = @_;
     if (my ($prefix, $reference) = $abbr =~ m/\A ($XML::RegExp::NCName) : (.*) \z/msx) {
         if ($self->namespace_uri($prefix)) {
-            return Data::HAL::URI->new(
-                _original => $abbr,
-                uri => URI::Template
-                    ->new($self->namespace_uri($prefix)->as_string)
-                    ->process(rel => URI::IRI->new($reference)->canonical->as_string),
-            );
+            my $templated = URI::Template->new($self->namespace_uri($prefix)->as_string);
+            my $iri = URI::IRI->new($reference)->canonical->as_string;
+            $templated = $templated->process(rel => $iri);
+            my $haluri = Data::HAL::URI->new(_original => $abbr,uri => $templated,);
+            return $haluri;
         }
     }
     return;
