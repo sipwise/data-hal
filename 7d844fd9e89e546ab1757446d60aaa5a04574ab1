@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a6ced46_8cdcab76",
+        "filename": "lib/Data/HAL/URI.pm",
+        "patchSetId": 7
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2018-03-20T11:10:24Z",
+      "side": 1,
+      "message": "this needs to be added in the perl URI.pm",
+      "range": {
+        "startLine": 55,
+        "startChar": 16,
+        "endLine": 55,
+        "endChar": 48
+      },
+      "revId": "7d844fd9e89e546ab1757446d60aaa5a04574ab1",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
