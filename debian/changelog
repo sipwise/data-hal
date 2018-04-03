@@ -1,3 +1,15 @@
+libdata-hal-perl (6.2.1.0+0~mr6.2.1.0) unstable; urgency=medium
+
+  [ Alexander Lutay ]
+  * [f14dacb] TT#33911 Perform 'wrap-and-sort -sat'
+
+  [ Rene Krenn ]
+  * [7d844fd] TT#34313 workaround for perl URI require_attempt logic bug
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Tue, 03 Apr 2018 22:26:31 +0200
+
 libdata-hal-perl (6.2.0.0+0~mr6.2.0.0) unstable; urgency=medium
 
   [ Gerhard Jungwirth ]
