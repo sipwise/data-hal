@@ -1,3 +1,12 @@
+libdata-hal-perl (1.12.10.0+0~mr4.5.10.0) unstable; urgency=medium
+
+  [ Victor Seva ]
+  * [2ed2dea] TT#18653 Dockerfile: remove libdata-hal-perl
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 18 Jun 2018 10:38:26 +0200
+
 libdata-hal-perl (1.12.9.0+0~mr4.5.9.0) unstable; urgency=medium
 
   * New release.
