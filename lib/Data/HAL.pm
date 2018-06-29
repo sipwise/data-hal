@@ -184,9 +184,9 @@ sub _to_nested {
                     if ( $p->$_can('_forcearray') && $p->_forcearray ){
                         $forcearray = 1;
                     } elsif ( $p->$_can('forcearray_policy') ) {
-                        $forcearray = $p->forcearray_policy($root,$prop,$r);
+                        $forcearray = $p->forcearray_policy($root,$prop,$r,$p);
                     } elsif ( $root->$_can('forcearray_policy') ) {
-                        $forcearray = $root->forcearray_policy($prop,$r,$p);
+                        $forcearray = $root->forcearray_policy($root,$prop,$r,$p);
                     } elsif ( $root->_forcearray_underneath ) {
                         if( $forcearray = $root->_forcearray_underneath->{all} ){
                             $forcearray = 1;
