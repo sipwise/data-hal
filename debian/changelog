@@ -1,3 +1,12 @@
+libdata-hal-perl (6.4.1.0+0~mr6.4.1.0) unstable; urgency=medium
+
+  [ Irina Peshinskaya ]
+  * [85190dc] TT#37650 Align forcearray policy arguments
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Tue, 24 Jul 2018 13:32:55 +0200
+
 libdata-hal-perl (6.4.0.0+0~mr6.4.0.0) unstable; urgency=medium
 
   * New release.
