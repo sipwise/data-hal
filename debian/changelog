@@ -1,3 +1,16 @@
+libdata-hal-perl (7.5.1.0+0~mr7.5.1.0) unstable; urgency=medium
+
+  [ Alexander Lutay ]
+  * [aa70ac4] TT#60950 Switch data-hal docker to buster
+
+  [ Guillem Jover ]
+  * [f9a78f8] TT#61954 Update copyright years
+  * [4ad973f] TT#61954 Set debhelper compat level in Build-Depends instead of debian/compat
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 05 Aug 2019 20:52:50 +0200
+
 libdata-hal-perl (7.5.0.0+0~mr7.5.0.0) unstable; urgency=medium
 
   * New release.
