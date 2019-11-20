@@ -2,6 +2,3 @@
 
 %:
 	dh $@
-
-override_dh_auto_test:
-	echo "skipping as it is failing currently"
