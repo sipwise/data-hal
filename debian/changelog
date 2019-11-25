@@ -1,3 +1,12 @@
+libdata-hal-perl (8.2.0.0+0~mr8.2.0.0) unstable; urgency=medium
+
+  [ Guillem Jover ]
+  * [8cc05b5] TT#71052 Improve testing
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 25 Nov 2019 14:52:53 +0100
+
 libdata-hal-perl (8.1.0.0+0~mr8.1.0.0) unstable; urgency=medium
 
   * New release.
