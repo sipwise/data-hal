@@ -1,3 +1,9 @@
+libdata-hal-perl (8.0.2.1+0~mr8.0.2.1) unstable; urgency=medium
+
+  * New release.
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 13 Jan 2020 15:16:27 +0100
+
 libdata-hal-perl (8.0.2.0+0~mr8.0.2.0) unstable; urgency=medium
 
   * New release.
