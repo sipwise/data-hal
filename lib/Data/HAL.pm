@@ -45,7 +45,7 @@ sub BUILD {
     return;
 }
 
-#for links array containig undef elements
+#for links array containing undef elements
 #around 'BUILDARGS' => sub {
 #    my $orig  = shift;
 #    my $class = shift;
