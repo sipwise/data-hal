@@ -3,7 +3,7 @@ Section: perl
 Priority: optional
 Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends:
- debhelper-compat (= 12),
+ debhelper-compat (= 13),
  libmodule-build-perl,
  perl,
 Build-Depends-Indep:
@@ -30,7 +30,7 @@ Build-Depends-Indep:
  liburi-perl,
  liburi-template-perl,
  libxml-regexp-perl,
-Standards-Version: 3.9.8
+Standards-Version: 4.5.1
 Homepage: https://metacpan.org/release/Data-HAL
 
 Package: libdata-hal-perl
