@@ -1,3 +1,10 @@
+libdata-hal-perl (11.5.1.0+0~mr11.5.1.0) unstable; urgency=medium
+
+  [ Mykola Malkov ]
+  * [11b08ee] MT#57453 Switch docker image to bookworm
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Wed, 30 Aug 2023 18:03:14 +0200
+
 libdata-hal-perl (11.5.0.0+0~mr11.5.0.0) unstable; urgency=medium
 
   * New release.
