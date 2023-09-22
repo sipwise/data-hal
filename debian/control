@@ -2,6 +2,7 @@ Source: libdata-hal-perl
 Section: perl
 Priority: optional
 Maintainer: Sipwise Development Team <support@sipwise.com>
+Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  libmodule-build-perl,
@@ -30,7 +31,7 @@ Build-Depends-Indep:
  liburi-perl,
  liburi-template-perl,
  libxml-regexp-perl,
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Homepage: https://metacpan.org/release/Data-HAL
 
 Package: libdata-hal-perl
