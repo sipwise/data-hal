@@ -18,7 +18,6 @@ Build-Depends-Indep:
  libindirect-perl <!nocheck>,
  libjson-perl,
  liblog-any-adapter-filehandle-perl,
- liblog-any-adapter-perl,
  liblog-any-perl,
  libmime-types-perl,
  libmoo-perl,
