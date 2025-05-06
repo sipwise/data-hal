@@ -17,7 +17,7 @@ Module::Build->new(
     dist_version_from => 'lib/Data/HAL.pm',
     dynamic_config => 0,
     license => 'perl',
-    meta-spec => {
+    'meta-spec' => {
         url => 'http://module-build.sourceforge.net/META-spec-v1.4.html',
         version => '1.4',
     },
