@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 use Module::Build qw();
 Module::Build->new(
     add_to_cleanup => [ 'Data-HAL-*' ],
