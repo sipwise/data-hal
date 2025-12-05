@@ -1,12 +1,12 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://metacpan.org/release/Data-HAL
-Upstream-Contact: Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
 Upstream-Name: Data-HAL
+Upstream-Contact: Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
 
 Files: *
 Copyright:
- Copyright © 2013 Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
- Copyright © 2013-2023 Sipwise GmbH, Austria
+ 2013 Lars Dɪᴇᴄᴋᴏᴡ <daxim@cpan.org>
+ 2013-2025 Sipwise GmbH, Austria
 License: Artistic or GPL-1+
 
 License: Artistic
